@@ -19,6 +19,9 @@ function main()
     # Shuffle our initial sample in case there is no more input from stdin
     R = shuffle(R)
 
+    # Instead of randomly deciding to keep a particular element, we model the
+    # geometric distribution to calculate how many elements to skip before accepting
+    # an element. The number of skips is easily computed in constant time.
     W = exp(log(rand(Float64))/n)
 
     counter = 0
