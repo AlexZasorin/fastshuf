@@ -9,17 +9,19 @@ This application functions similarly to the `shuf` command-line utility. It does
 It will accept a stream of elements and randomly sample these elements into a reservoir of the specified size.
 
 Example:
-    alex@PC:/home/alex/julia-projects$ seq 100 | julia fastshuf.jl 10
-    53
-    82
-    6
-    22
-    55
-    39
-    77
-    95
-    48
-    72
+```
+alex@PC:/home/alex/julia-projects$ seq 100 | julia fastshuf.jl 10
+53
+82
+6
+22
+55
+39
+77
+95
+48
+72
+```
 
 Requirements
 ================
