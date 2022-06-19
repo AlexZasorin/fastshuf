@@ -4,7 +4,7 @@ function main()
     # Check if we received any arguments
     if isempty(ARGS)
         # If we did not, default to 100 elements
-        n = 100
+        n = 10
     else
         # If we did, use the argument we were given
         n = parse(Int64, ARGS[1])
@@ -19,18 +19,6 @@ function main()
     # Shuffle our initial sample in case there is no more input from stdin
     R = shuffle(R)
 
-    # for (i, line) in enumerate(eachline())
-    #     if i >= 3*n
-    #         break
-    #     end
-    #
-    #     rand_int = rand(1:n+i)
-    #
-    #     if rand_int <= n
-    #         R[rand_int] = line
-    #     end
-    # end
-
     W = exp(log(rand(Float64))/n)
 
     counter = 0
@@ -44,7 +32,6 @@ function main()
             W = W * exp(log(rand(Float64))/n)
 
             counter = floor(log(rand(Float64))/log(1-W)) + 1
-            #println(counter)
         end
     end
 
@@ -54,8 +41,5 @@ function main()
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
-    #start_time = time()
     main()
-    #end_time = time()
-    #println(end_time-start_time)
 end
