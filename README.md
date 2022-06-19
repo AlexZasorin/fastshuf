@@ -34,7 +34,7 @@ Proof
 ================
 Here is a proof I wrote for a class that shows why the naive reservoir sampling algorithm yields a random sample.
 
-Let r be our reservoir size and $n$ be the number of input elements we have seen so far. Whenever $n \le r$, we set r = n, as per the reservoir sampling algorithm. As our base case, let's use n = r. Each item chosen to be in the reservoir will have had a $\frac{r}{n} = 1$ chance to be chosen. By definition, our sample is a simple random sample.
+Let r be our reservoir size and n be the number of input elements we have seen so far. Whenever $n \le r$, we set r = n, as per the reservoir sampling algorithm. As our base case, let's use n = r. Each item chosen to be in the reservoir will have had a $\frac{r}{n} = 1$ chance to be chosen. By definition, our sample is a simple random sample.
 
 For our inductive hypothesis, we will say that the algorithm produces a simple random sample for some k = r. We will try to show that this is true for k+1.
 
